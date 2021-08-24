@@ -8,6 +8,7 @@ data:
     in_repo_config:
       enabled:
         nblintsov/jenkinsx: true
+        nblintsov/jx-repo-test: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -20,6 +21,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         nblintsov/jenkinsx: merge
+        nblintsov/jx-repo-test: merge
       queries:
       - labels:
         - approved
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - nblintsov/jenkinsx
+        - nblintsov/jx-repo-test
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - nblintsov/jenkinsx
+        - nblintsov/jx-repo-test
       target_url: http://lighthouse-jx.192.168.64.3.nip.io/merge/status
 kind: ConfigMap
 metadata:

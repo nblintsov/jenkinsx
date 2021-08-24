@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: nblintsov
+    provider: github
+    repository: jx-repo-test
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: nblintsov-jx-repo-test
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/nblintsov/jx-repo-test.git
+  org: nblintsov
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jx-repo-test
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/nblintsov/jx-repo-test
